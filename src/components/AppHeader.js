@@ -19,9 +19,10 @@ function AppHeader() {
 
     const logoutUser = () => {
         /**
-         * TODO Write logic to route to login page on clicking logout button.
+         * Write logic to route to login page on clicking logout button.
          */
         loginContext.logoutUser();
+        history.push('/login');
     }
 
     return (
@@ -69,7 +70,7 @@ function AppHeader() {
                     <div className="header-right">
 
                         <Link type="button" className="btn btn-success" to="/">
-                            <i className="fas fa-user"/>&nbsp; Welcome Guest
+                            <i className="fas fa-user"/>&nbsp; Welcome {loginContext.isLoggedIn ? loginContext.loggedInUser.userName : 'Guest'}
                             <span className="sr-only">logged in user</span>
                         </Link>
                     </div>

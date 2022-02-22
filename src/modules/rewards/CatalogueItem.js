@@ -36,6 +36,8 @@ const CatalogueItem = ({ catalogue }) => {
             return bookmyshow;
         } else if (item.match(/titan/i) != null) {
             return titan;
+        } else {
+            return bookmyshow;
         }
 
     }
