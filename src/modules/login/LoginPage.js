@@ -51,7 +51,7 @@ function LoginPage(props) {
                 // updating the login context
                 setLoginUserDetails(response.data.body)
                 // navigating to the homepage after login
-                history.push('/rewards');
+                history.push('/');
 
             })
             .catch(error => {
