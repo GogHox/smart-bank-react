@@ -19,9 +19,9 @@ function LoginContextProvider(props) {
 
     const setLoginUserDetails = (user) =>  {
 
-        console.log("setting log in user details");
+        console.log("setting log in user details", user);
         setIsLoggedIn(true)
-        
+
         setLoggedInUser( user);
         
         

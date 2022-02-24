@@ -1,18 +1,23 @@
 import React, {useContext} from 'react';
 import { Link } from 'react-router-dom';
 import CartItems from './CartItems';
-import {LoginContext} from "../../contexts/LoginContext";
 import {CartContext} from "../../contexts/CartContext";
+import {LoginContext} from "../../contexts/LoginContext";
 
 function CartPage() {
-    const {loggedInUser,
-        isLoggedIn,
-        setLoginUserDetails,
-        logoutUser,
-        refreshLoginDetails } = useContext(LoginContext);
 
-    const {cartCount, addToCart, cartItems,cartSummary, removeItemFromCart, afterPurchase} = useContext(CartContext);
-
+    const {cartItems} = useContext(CartContext)
+    const {isLoggedIn, loggedInUser} = useContext(LoginContext);
+    // const isLoggedIn = false;
+    //
+    // const loggedInUser = {
+    //     ccNumber: 0,
+    //     ccName: "Dummy Card",
+    //     userName: "Guest User",
+    //     userId: "guest",
+    //     availableRedeemPoints: 0,
+    //     totalRewardsGained: 0
+    // }
 
     return (
         <div className="container">
